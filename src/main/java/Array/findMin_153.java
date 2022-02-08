@@ -7,14 +7,17 @@ public class findMin_153 {
             return nums[0];
         }
 
-        // Left, Right 포인터 초기화
+        // Left, right 포인터 초기화
         int left = 0, right = nums.length - 1;
 
         // 원래 배열 일 때는, 오름차 순이라 A[0] 이 가작 작은 수.
-        // e.g. 1 < 2 < 3 < 4 < 5 < 7.
+        // e.g. 0 < 1 < 2 < 4 < 5 < 6 < 7.
+        // 7, 0, 1, 2, 4, 5, 6,
+        // 6, 7, 0, 1, 2, 4, 5
+        // 4, 5, 6, 7, 0, 1, 2
         if (nums[right] > nums[0]) {
             return nums[0];
-        }
+        } 
 
         // 이진 검색. Rotation이 일어났을 경우
         while (right >= left) {
