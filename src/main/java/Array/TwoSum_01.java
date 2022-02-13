@@ -1,5 +1,8 @@
 package Array;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum_01 {
     static int[] bruteForce(int[] num, int target) {
         int[] result = new int[2];
@@ -16,6 +19,18 @@ public class TwoSum_01 {
         }
         return result;
 
+    }
+
+    static int[] hashMap(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[] { i, map.get(complement) };
+            }
+            map.put(nums[i], i);
+        }
+        return null;
     }
 
     public static void main(String[] args) {
