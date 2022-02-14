@@ -1,6 +1,6 @@
 package Array;
 
-public class findMin_153 {
+public class FindMin_153 {
     public int findMin(int[] nums) {
         // 배열 길이가 1개 일 때
         if (nums.length == 1) {

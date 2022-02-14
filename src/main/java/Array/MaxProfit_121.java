@@ -64,6 +64,21 @@ public class MaxProfit_121 {
         return max;
     }
 
+    static int mySolution(int[] prices) {
+        int min = Integer.MAX_VALUE;
+        int output = 0;
+        int result = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (min > prices[i]) {
+                min = prices[i];
+                continue;
+            }
+            output = prices[i] - min;
+            result = Math.max(result, output);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
         int[] prices1 = {7, 1, 5, 3, 6, 4};

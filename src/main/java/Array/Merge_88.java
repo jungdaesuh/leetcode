@@ -2,7 +2,7 @@ package Array;
 
 import java.util.Arrays;
 
-public class merge_88 {
+public class Merge_88 {
 
     public void inBuiltFunction(int[] nums1, int m, int[] nums2, int n) {
         for (int i = 0; i < n; i++) {

@@ -1,6 +1,6 @@
 package Array;
 
-public class maxProduct_152 {
+public class MaxProduct_152 {
      static int On3 (int[] nums) {
         int maxProduct = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {

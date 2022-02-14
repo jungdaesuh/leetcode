@@ -1,6 +1,6 @@
 package Array;
 
-public class productExceptSelf_238 {
+public class ProductExceptSelf_238 {
     static int[] leftAndRightProductLists(int[] nums) {
         int length = nums.length;
         int[] left = new int[length];
